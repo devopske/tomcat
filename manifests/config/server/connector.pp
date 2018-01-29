@@ -36,7 +36,7 @@ define tomcat::config::server::connector (
 
   validate_re($connector_ensure, '^(present|absent|true|false)$')
   validate_hash($additional_attributes)
-  validate_bool($_purge_connectors)
+  #validate_bool($_purge_connectors)
   validate_re($_catalina_base, '^.*[^/]$', '$catalina_base must not end in a /!')
 
   $path = "Server/Service[#attribute/name='${parent_service}']"
