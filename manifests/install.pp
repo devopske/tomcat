@@ -36,7 +36,7 @@ define tomcat::install (
       manage_group           => $_manage_group,
     }
   } else {
-    tomcat::install::package { $package_name_i:
+    tomcat::install::package { $package_name_i for ${owner}:
       package_ensure  => $package_ensure,
       package_options => $package_options,
     }
