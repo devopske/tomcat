@@ -91,7 +91,7 @@ define tomcat::instance (
       manage_user            => $_manage_user,
       manage_group           => $_manage_group,
       package_ensure         => $package_ensure,
-      package_name_i           => $package_name,
+      package_name           => $package_name,
       package_options        => $package_options,
     }
     $_manage_service = pick($manage_service, false)
