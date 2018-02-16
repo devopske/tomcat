@@ -39,7 +39,7 @@ define tomcat::instance (
   $source_url             = undef,
   $source_strip_first_dir = undef,
   $package_ensure         = undef,
-  #$package_name           = undef,
+  $package_name           = undef,
   $package_options        = undef,
 ) {
   include tomcat
