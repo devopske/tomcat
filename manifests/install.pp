@@ -13,7 +13,7 @@ define tomcat::install (
 
   # package options
   $package_ensure         = undef,
-  $package_name           = undef,
+  $package_name           = 'tomcat8',
   $package_options        = undef,
 ) {
   include tomcat
