@@ -12,8 +12,8 @@ define tomcat::install (
   $manage_group           = undef,
 
   # package options
- # $package_ensure         = undef,
-#  $package_name           = undef,
+  $package_ensure         = undef,
+  $package_name           = undef,
   $package_options        = undef,
 ) {
   include tomcat
