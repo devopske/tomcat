@@ -13,7 +13,7 @@ define tomcat::install (
 
   # package options
   $package_ensure         = undef,
-  $package_name           = undef,
+  $package_name_i           = undef,
   $package_options        = undef,
 ) {
   include tomcat
@@ -36,7 +36,7 @@ define tomcat::install (
       manage_group           => $_manage_group,
     }
   } else {
-    tomcat::install::package { $package_name:
+    tomcat::install::package { $package_name_i:
       package_ensure  => $package_ensure,
       package_options => $package_options,
     }
